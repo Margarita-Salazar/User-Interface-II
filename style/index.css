@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -21,6 +24,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-align:center;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -46,8 +50,111 @@ table {
 	border-spacing: 0;
 }
 /* css style here */
-
 *{
-	border: 1px solid grey;
 	box-sizing: border-box;
+	max-width:100%;
+	font-family: 'B612 Mono', monospace;
+}
+h1{
+	text-align: center;
+	margin: 4% 0;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	font-weight: bold;
+	font-size: 2rem;
+}
+.navBar{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	
+}
+.navBar div{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.navBar a{
+	border: 1px solid black;
+	color: black;
+	width: 14%;
+	text-decoration: none;
+	font-size: 1.5rem;
+	align-items: center;
+	padding: 1%;
+	font-family: 'B612 Mono', monospace;
+	
+}
+.navBar div a:first-child{
+	background-color: black;
+	color: white;
+}
+.intro p{
+	margin: 0 8% 2%;
+	text-align: left;
+	line-height: 4vh;
+	font-family: Arial;
+}
+.backPhoto {
+	height: 76vh;
+	width: 100%;
+	background-image: url("https://images.unsplash.com/photo-1606234942951-b10a5b373ff0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1435&q=80");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.galDes {
+	display: flex;
+	flex-direction: row;
+	height: 70vh;
+	margin: 1% 0;
+}
+.leftCont{
+	display: flex;
+	justify-content: space-between;
+	width: 64%;
+	
+}
+.leftcont img{
+	width: 20%;
+	height: 100%;
+}
+.right{
+	display: flex;
+	width: 36%;
+	justify-content: center;
+	padding: 10% 8%;
+
+}
+.right p{
+	text-align: left;
+	font-family: 'B612 Mono', monospace;
+}
+footer {
+	display: flex;
+	height: 20vh;
+	align-items: center;
+	justify-content: center;
+	background-color: lightgrey;
+}
+.contact div{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact a {
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	width: 18vw;
+	text-decoration: none;
+	font-size: 1.5rem;
+	align-items: center;
+	padding: 4%;
+	font-family: 'B612 Mono', monospace;
 }
