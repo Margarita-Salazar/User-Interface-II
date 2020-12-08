@@ -1,1 +1,239 @@
-/* Add CSS styling here */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-align:center;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* css style here */
+*{
+	box-sizing: border-box;
+	max-width:100%;
+	font-family: 'B612 Mono', monospace;
+	max-width: 100%;
+	color: #2e2e2e;
+}
+h1{
+	text-align: center;
+	margin: 4% 0;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	font-weight: bold;
+	font-size: 2.5rem;
+}
+.main-container h2{
+	text-align: center;
+	margin: 4% 0;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .3rem;;
+	font-size: 2rem;
+
+}
+.nav-bar{
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	justify-content: center;
+	
+}
+.nav-items{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.nav-items a{
+	border: 1px solid black;
+	width: 20%;
+	text-decoration: none;
+	font-size: 1.5rem;
+	align-items: center;
+	padding: 1%;
+	font-family: 'B612 Mono', monospace;
+	transition: .3s;
+	
+}
+.nav-items a:first-child{
+	background-color: #2e2e2e;
+	color: white;
+}
+.nav-bar .nav-items a:hover {
+	background: #0b7a9a;
+	color: white;
+	border: 1px solid white;
+}
+.intro {
+	margin: 1.5rem 0;
+}
+.intro p{
+	margin: 0 8% 2%;
+	text-align: left;
+	line-height: 4vh;
+	font-family: Arial;
+	font-family: 'B612 Mono', monospace;
+}
+.background-photo {
+	height: 76vh;
+	width: 100%;
+	background-image: url("https://images.unsplash.com/photo-1606234942951-b10a5b373ff0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1435&q=80");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 60%;
+}
+.gallery {
+	display: flex;
+	flex-direction: row;
+	height: 80vh;
+	margin: 1% 0;
+	
+}
+.left-container{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	width: 80%;
+	
+}
+.left-container img{
+	width: 24%;
+}
+.left-container img:hover{
+	border: 4px solid black;
+}
+.right-container{
+	width: 36%;
+	padding: 12% 10%;
+
+}
+.right-container p{
+	text-align: left;
+	font-family: 'B612 Mono', monospace;
+}
+.contact{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: lightgray;
+	padding:2rem;
+}
+.contact a {
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	width: 30%;
+	text-decoration: none;
+	font-size: 1.5rem;
+	padding: 1.5rem;
+	font-family: 'B612 Mono', monospace;
+}
+
+/* media queries */
+/* tablet view */
+@media (max-width: 800px) {
+	.main-container{
+		margin: 0 1.5rem ;
+	}
+	.nav-items{
+		flex-direction: column;
+	}
+	.nav-items a{
+		padding: 1.5rem;
+		width:30%;
+	}
+	.background-photo{
+		height: 50vh;
+	}
+	.gallery{
+		flex-direction: column;
+		width:100%;
+		height: 100%;
+	}
+	.left-container{
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		
+	}
+	.left-container img{
+		width:48%;
+		height: 80vh;
+		margin: 1.5rem 0;
+	}
+	.right-container{
+		width: 100%;
+	}
+	.right-container p{
+		text-align: center;
+	}
+	
+}
+/* mobile view */
+@media (max-width:500px){
+	h1{
+		font-size: 1rem;
+	}
+	.nav-items a{
+		width: 30%;
+		font-size: .8rem;
+	}
+	.main-container h2{
+		font-size: .8rem;
+	}
+	.main-container p{
+		font-size: .6rem;
+	}
+	.background-photo{
+		height: 40vh;
+	}
+	.contact a{
+		width: 50%;
+		font-size: 1rem;
+	}
+}
